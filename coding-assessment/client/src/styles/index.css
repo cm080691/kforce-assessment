@@ -28,12 +28,7 @@ header {
 	border-bottom: 1px solid #ddd;
 	font-size: 28px;
 	padding: 0 0 7px;
-}
-
-@media screen and (max-width: 767px) {
-  body {
-    padding: 20px;
-}
+} 
 
 #large {
 	margin: 25px auto;
@@ -71,25 +66,25 @@ header {
 }
 
 .thumbnails {
-	border: 1px solid #ddd;
-	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
-	margin: 0 auto;
-	position: relative;
-	padding: 10px 45px;
-	width: 80%;
-}
-
-.thumbnails a {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+	gap: 10px;
+  }
+  
+  .thumbnails a {
 	color: #777;
-	float: left;
-	margin: 0 5px;
+	flex: 1;
+	max-width: 150px;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-}
+  }
+  
 
 .thumbnails img {
 	border: 5px solid transparent;
@@ -184,3 +179,74 @@ footer {
     justify-content: space-between;
 }
 
+
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    #large {
+        width: 100%;
+    }
+
+    #large img {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .details {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .thumbnails {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .thumbnails a {
+        margin: 0 2.5%;
+        width: 45%;
+    }
+
+    .thumbnails img {
+        width: 100%;
+    }
+
+    .thumbnails .previous, .thumbnails .next {
+        top: 50%;
+        left: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 11px;
+    }
+
+    .details strong {
+        font-size: 9px;
+    }
+
+    .thumbnails a span {
+        font-size: 11px;
+        padding: 2px 10px;
+    }
+}
