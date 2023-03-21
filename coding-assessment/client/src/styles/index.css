@@ -30,6 +30,11 @@ header {
 	padding: 0 0 7px;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    padding: 20px;
+}
+
 #large {
 	margin: 25px auto;
 	width: 700px;
